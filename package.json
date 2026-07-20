@@ -1,6 +1,6 @@
 {
   "name": "tds-customer-panel",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Customer portal product (app.tracht-digital.de): composes the core panel host with the customer-facing extension set. Deployed from its own dev/release branches.",
   "license": "UNLICENSED",
   "private": true,
@@ -18,6 +18,7 @@
     "@fontsource/lato": "^5.2.7",
     "@tailwindcss/postcss": "~4.2.4",
     "@tracht-digital-solutions/tds-core-panel-frontend": "^0.10.0",
+    "@tracht-digital-solutions/tds-ext-billing": "^0.1.1",
     "@tracht-digital-solutions/tds-ext-support-tickets": "^0.7.1",
     "@tracht-digital-solutions/tds-panel-contract": "^1.2.0",
     "@tracht-digital-solutions/tds-shared": "^0.12.0",

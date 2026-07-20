@@ -7,8 +7,9 @@ import { tdsViteBuild } from "@tracht-digital-solutions/tds-shared/astro";
 // The customer-portal extension set — customer-facing only. corePanelBase injects
 // the shared base routes; panelHost injects each extension's route + virtuals.
 import supportTickets from "@tracht-digital-solutions/tds-ext-support-tickets";
+import billing from "@tracht-digital-solutions/tds-ext-billing";
 
-const extensions = [supportTickets];
+const extensions = [supportTickets, billing];
 
 // This product builds as the CUSTOMER target (shell auth-hint key + brand).
 process.env.PANEL_TARGET = "customer";

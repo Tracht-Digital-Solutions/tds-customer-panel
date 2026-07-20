@@ -17,9 +17,10 @@ in published packages.
   - `panelHost({ extensions })` injects each extension's route + virtual modules.
   - `PANEL_TARGET=customer` selects the customer auth-hint prefix (`tds_customer_*`) + brand
     ("Portal").
-- **Extension set:** currently just `support-tickets` (customer-facing subset). Projects,
-  invoices (`billing`), documents and messages get added here as those extensions ship — see
-  `MIGRATION-STATUS.md` for what's still owned by the legacy `tds-customer(-api)`.
+- **Extension set:** `support-tickets` + `billing` (the customer-facing invoice pay-link /
+  own-invoice view; admins draft invoices in the admin panel). Projects, documents and
+  messages get added here as those extensions ship — see `MIGRATION-STATUS.md` for what's
+  still owned by the legacy `tds-customer(-api)`.
 - **Cross-panel SSO:** the session cookie is `Domain=.tracht-digital.de`, so a principal with
   access is signed into this portal *and* the admin panel by one login. The per-target hint
   key prefix keeps a stale admin hint from revealing the portal.
