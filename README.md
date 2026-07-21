@@ -1,4 +1,4 @@
-# tds-customer-panel
+# tds-customer-frontend
 
 The **customer portal** product (`app.tracht-digital.de`). A standalone Astro app
 that composes the shared **core panel host**

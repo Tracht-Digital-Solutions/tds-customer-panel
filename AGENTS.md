@@ -1,4 +1,4 @@
-# Agent notes — tds-customer-panel
+# Agent notes — tds-customer-frontend
 
 The **customer portal product** (`app.tracht-digital.de`). A standalone Astro app that
 composes the shared core panel **host** (`@tracht-digital-solutions/tds-core-panel-frontend`)
@@ -7,7 +7,7 @@ repo owns only the composition + deploy pipeline — the shell, base pages, and 
 in published packages.
 
 > Read the root `C:\Projects\TDS-LP\CLAUDE.md` for the big picture and shared gotchas, and
-> `MIGRATION-STATUS.md` for how this product (partially) replaces the legacy `tds-customer`.
+> `MIGRATION-STATUS.md` for how this product (partially) replaces the legacy `tds-customer-legacy-frontend`.
 
 ## Mental model
 
@@ -20,7 +20,7 @@ in published packages.
 - **Extension set:** `support-tickets` + `billing` (the customer-facing invoice pay-link /
   own-invoice view; admins draft invoices in the admin panel). Projects, documents and
   messages get added here as those extensions ship — see `MIGRATION-STATUS.md` for what's
-  still owned by the legacy `tds-customer(-api)`.
+  still owned by the legacy `tds-customer-legacy-frontend(-api)`.
 - **Cross-panel SSO:** the session cookie is `Domain=.tracht-digital.de`, so a principal with
   access is signed into this portal *and* the admin panel by one login. The per-target hint
   key prefix keeps a stale admin hint from revealing the portal.
@@ -29,7 +29,7 @@ in published packages.
 
 ## Gotchas
 
-Same as `tds-admin-panel`: `npm install --no-package-lock`; extensions pinned `^0.1.x`;
+Same as `tds-admin-frontend`: `npm install --no-package-lock`; extensions pinned `^0.1.x`;
 Tailwind `@source` scan lives in the host; `PACKAGE_TOKEN` required, `DEPLOY_WEBHOOK_URL`
 optional.
 
