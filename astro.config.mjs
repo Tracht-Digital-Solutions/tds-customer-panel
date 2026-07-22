@@ -8,8 +8,11 @@ import { tdsViteBuild } from "@tracht-digital-solutions/tds-shared/astro";
 // the shared base routes; frontendHost injects each extension's route + virtuals.
 import supportTickets from "@tracht-digital-solutions/tds-ext-support-tickets";
 import billing from "@tracht-digital-solutions/tds-ext-billing";
+import messages from "@tracht-digital-solutions/tds-ext-messages";
+import projects from "@tracht-digital-solutions/tds-ext-projects";
+import documents from "@tracht-digital-solutions/tds-ext-documents";
 
-const extensions = [supportTickets, billing];
+const extensions = [supportTickets, billing, messages, projects, documents];
 
 // This product builds as the CUSTOMER target (shell auth-hint key + brand).
 process.env.FRONTEND_TARGET = "customer";
